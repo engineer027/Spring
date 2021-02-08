@@ -21,6 +21,7 @@ public class Main {
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext(AppConfig.class);
         UserService userService = context.getBean(UserService.class);
+
         userService.add(bob);
         userService.add(pavlo);
 
