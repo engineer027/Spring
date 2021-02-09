@@ -10,7 +10,7 @@ import spring.train.model.User;
 
 @Repository
 public class UserDaoImpl implements UserDao {
-    private SessionFactory sessionFactory;
+    private final SessionFactory sessionFactory;
 
     public UserDaoImpl(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
