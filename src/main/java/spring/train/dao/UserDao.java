@@ -1,6 +1,7 @@
 package spring.train.dao;
 
 import java.util.List;
+import java.util.Optional;
 import spring.train.model.User;
 
 public interface UserDao {
@@ -8,5 +9,5 @@ public interface UserDao {
 
     List<User> listUsers();
 
-    User get(Long userId);
+    Optional<User> get(Long userId);
 }

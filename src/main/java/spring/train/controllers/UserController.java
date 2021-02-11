@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import spring.train.UserResponseDto;
+import spring.train.dto.UserResponseDto;
 import spring.train.model.User;
 import spring.train.service.UserService;
 import spring.train.service.user.mapper.UserMapper;
@@ -23,7 +23,7 @@ public class UserController {
     }
 
     @GetMapping("/{userId}")
-    public UserResponseDto get(@PathVariable(name = "userId") Long userId) {
+    public UserResponseDto get(@PathVariable Long userId) {
         return mapper.mapUserToDto(userService.get(userId));
     }
 
